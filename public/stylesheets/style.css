@@ -1,8 +1,23 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  font-size: 5vh;
+  color: darkslategray;
+}
+
+strong {
+  font-size: 2vh;
+}
+
+span {
+  font-size: 2vh;
+  color: brown
+}
+
+button {
+  font-size: 16px;
 }

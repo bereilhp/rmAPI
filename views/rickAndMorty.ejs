@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
+
+<head>
+    <title>Rick and Morty API</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+</head>
+
+<body>
+  <h1>Welcome to <%= title %></h1>
+  <div><strong>Name: </strong><span><%= data.name %></span></div>
+  <br>
+  <div><strong>Status: </strong><span><%= data.status %></span></div>
+  <br>
+  <div><strong>Species: </strong><span><%= data.status %></span></div>
+  <br>
+  <div><strong>Origin: </strong><span><%= data.origin.name %></span></div>
+  <br>
+  <div><strong>Location: </strong><span><%= data.location.name %></span></div>
+  <br>
+  <img src=<%= data.image %> alt="imageFromAPIofCharacter">
+  <br>
+  <br>
+  <button onClick="window.location.reload();">Get New Character</button>
+  <br>
+  <br>
+  <a href="https://rickandmortyapi.com/" target="_blank" rel="noopener noreferrer">The Rick and Morty API</a>
+           
+</body>
+
 </html>

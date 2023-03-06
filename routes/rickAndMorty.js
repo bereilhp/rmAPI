@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     jsonData = req.data;
     //console.log(jsonData);
-    res.render('rickAndMorty', { title:'Rick and Morty Characters', data:jsonData});
+    res.render('rickAndMorty', { title:'Rick and Morty Random Character from API', data:jsonData});
 });
 
 module.exports = router;
