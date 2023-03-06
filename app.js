@@ -8,6 +8,8 @@ let axios = require("axios");
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
+let rickAndMortyRouter = require("./routes/rickAndMorty.js")
+
 let app = express();
 
 // view engine setup
@@ -22,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use("/rickAndMorty", rickAndMortyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
