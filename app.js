@@ -24,7 +24,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use("/rickAndMorty", rickAndMortyRouter);
+app.use("/rickAndMorty", fetchRickAndMortyAPI, rickAndMortyRouter);
+
+async function fetchRickAndMortyAPI(req, res, next){
+  let x = Math.floor(Math.random() * 826);
+  const url = "https://rickandmortyapi.com/api/character/" + x;
+  let dataReq = await axios.get(url);
+  req.data = dataReq.data;
+  next();
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
